@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -451416735473287662}
   - component: {fileID: 2468129218970145105}
   - component: {fileID: -6491898624822006951}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 2
   m_TagString: Asteroid
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.0029999998
+  m_Radius: 2
   m_Center: {x: 0.00016920513, y: -0.0004255718, z: 0.00017248513}
 --- !u!114 &-6491898624822006951
 MonoBehaviour:
