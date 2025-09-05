@@ -74,7 +74,7 @@ public class PlayerMovementGrappling : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovePlayer();
+        //MovePlayer();
     }
 
     private void MyInput()
@@ -175,13 +175,13 @@ public class PlayerMovementGrappling : MonoBehaviour
         enableMovementOnNextTouch = true;
         rb.velocity = velocityToSet;
 
-        cam.DoFov(grappleFov);
+        //cam.DoFov(grappleFov);
     }
 
     public void ResetRestrictions()
     {
         activeGrapple = false;
-        cam.DoFov(85f);
+        //cam.DoFov(85f);
     }
 
     private void OnCollisionEnter(Collision collision)
