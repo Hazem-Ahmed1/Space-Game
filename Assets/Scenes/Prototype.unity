@@ -1377,7 +1377,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   lr: {fileID: 35431546}
-  maxGrappleDistance: 50
+  maxGrappleDistance: 100
   grappleDelayTime: 0.25
   overshootYAxis: 0
   grapplingCd: 1
