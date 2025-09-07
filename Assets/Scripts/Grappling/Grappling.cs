@@ -1,47 +1,43 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Grappling : MonoBehaviour
 {
     [Header("References")]
-    private PlayerMovementGrappling pm;
     public Transform cam;
     public Transform gunTip;
     public LayerMask whatIsGrappleable;
     public LineRenderer lr;
 
-    [Header("Grappling")]
-    public float maxGrappleDistance;
-    public float grappleDelayTime;
-    public float overshootYAxis;
-
-    private Vector3 grapplePoint;
+    [Header("Grappling Settings")]
+    public float maxGrappleDistance = 25f;
+    public float grappleDelayTime = 0.2f;
+    public float overshootYAxis = 2f;
 
     [Header("Cooldown")]
-    public float grapplingCd;
+    public float grapplingCd = 2f;
     private float grapplingCdTimer;
 
     [Header("Input")]
     public KeyCode grappleKey = KeyCode.Mouse1;
 
+    private Vector3 grapplePoint;
     private bool grappling;
+
+    // State machine reference
+    private PlayerManager player;
 
     private void Start()
     {
-        pm = GetComponent<PlayerMovementGrappling>();
+        player = GetComponent<PlayerManager>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(grappleKey)) StartGrapple();
+        if (Input.GetKeyDown(grappleKey))
+            StartGrapple();
 
         if (grapplingCdTimer > 0)
             grapplingCdTimer -= Time.deltaTime;
-    }
-
-    private void LateUpdate()
-    {
-        // if (grappling)
-        //    lr.SetPosition(0, gunTip.position);
     }
 
     private void StartGrapple()
@@ -50,30 +46,21 @@ public class Grappling : MonoBehaviour
 
         grappling = true;
 
-        //pm.freeze = true;
-
         RaycastHit hit;
         if (Physics.Raycast(cam.position, cam.forward, out hit, maxGrappleDistance, whatIsGrappleable))
         {
             grapplePoint = hit.point;
-
             Invoke(nameof(ExecuteGrapple), grappleDelayTime);
         }
         else
         {
             grapplePoint = cam.position + cam.forward * maxGrappleDistance;
-
             Invoke(nameof(StopGrapple), grappleDelayTime);
         }
-
-        //lr.enabled = true;
-        //lr.SetPosition(1, grapplePoint);
     }
 
     private void ExecuteGrapple()
     {
-        //pm.freeze = false;
-
         Vector3 lowestPoint = new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z);
 
         float grapplePointRelativeYPos = grapplePoint.y - lowestPoint.y;
@@ -81,29 +68,27 @@ public class Grappling : MonoBehaviour
 
         if (grapplePointRelativeYPos < 0) highestPointOnArc = overshootYAxis;
 
-        pm.JumpToPosition(grapplePoint, highestPointOnArc);
+        // Switch state → Grappling
+        player._stateMachine.SwitchState(player.grapplingState);
+        player.grapplingState.JumpToPosition(grapplePoint, highestPointOnArc);
 
-        Invoke(nameof(StopGrapple), 1f);
+        Invoke(nameof(StopGrapple), 1.5f);
     }
 
     public void StopGrapple()
     {
-        pm.freeze = false;
-
         grappling = false;
-
         grapplingCdTimer = grapplingCd;
 
-        //lr.enabled = false;
+        // return to Idle after grapple ends
+        if (player._stateMachine.CurrentState == player.grapplingState)
+        {
+            player._stateMachine.SwitchState(player.idleState);
+        }
     }
 
-    public bool IsGrappling()
-    {
-        return grappling;
-    }
+    public bool IsGrappling() => grappling;
 
-    public Vector3 GetGrapplePoint()
-    {
-        return grapplePoint;
-    }
+    public Vector3 GetGrapplePoint() => grapplePoint;
 }
+
