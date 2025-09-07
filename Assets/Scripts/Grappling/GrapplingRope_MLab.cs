@@ -93,6 +93,7 @@ public class GrapplingRope_MLab : MonoBehaviour
             float delta = i / (float)quality;
             // calculate the offset of the current rope segment
             Vector3 offset = up * waveHeight * Mathf.Sin(delta * waveCount * Mathf.PI) * spring.Value * affectCurve.Evaluate(delta);
+            //if (lr.positionCount < 2) lr.positionCount = 2;
 
             // lerp the lineRenderer position towards the currentGrapplePosition + the offset you just calculated
             lr.SetPosition(i, Vector3.Lerp(gunTipPosition, currentGrapplePosition, delta) + offset);
