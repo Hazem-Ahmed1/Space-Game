@@ -574,6 +574,24 @@ MonoBehaviour:
   explosionRadius: 5
   upwardModifier: 0.5
   vfx: {fileID: 1007127540951276732, guid: 3ace37360f306cb4aac03640550fa9ef, type: 3}
+--- !u!114 &809529707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809529699}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.8673947, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &821702192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 76477195db24d0549a724ca5ddd590b1,
@@ -719,6 +737,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 809529700}
+    - targetCorrespondingSourceObject: {fileID: 4470236500797245291, guid: c2362253ee2ff31459bb8b966a10b19b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 809529707}
   m_SourcePrefab: {fileID: 100100000, guid: c2362253ee2ff31459bb8b966a10b19b, type: 3}
 --- !u!1 &987639072
 GameObject:
@@ -1109,6 +1131,24 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2.6949997
   m_Center: {x: 0.013898253, y: -0.24506617, z: -0.16358578}
+--- !u!114 &1396445262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396445254}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.9961413, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1434146179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,6 +2708,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1396445261}
+    - targetCorrespondingSourceObject: {fileID: 6554301099234007240, guid: 1afcbc23c2c4313428073195d9910596,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1396445262}
   m_SourcePrefab: {fileID: 100100000, guid: 1afcbc23c2c4313428073195d9910596, type: 3}
 --- !u!1 &3320336187124735317
 GameObject:
@@ -3389,6 +3433,7 @@ GameObject:
   - component: {fileID: 2734995044610632173}
   - component: {fileID: 1926872570341229347}
   - component: {fileID: 1935816805}
+  - component: {fileID: 6877989721569719602}
   m_Layer: 0
   m_Name: AstraCharacter
   m_TagString: Untagged
@@ -3670,6 +3715,19 @@ Transform:
   - {fileID: 768235154844135279}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6877989721569719602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6068696814406807435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56120ebcc4cd3f743a9f81a67289ef86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 100
 --- !u!4 &6909175122350332772
 Transform:
   m_ObjectHideFlags: 0
