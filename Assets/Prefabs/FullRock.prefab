@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 6233789143338016604}
   - component: {fileID: 4571748233250198828}
   - component: {fileID: 384759787245206709}
+  - component: {fileID: 8061874063312551161}
+  - component: {fileID: 5198732816437428505}
+  - component: {fileID: 3951055883349688435}
   m_Layer: 3
   m_Name: FullRock
   m_TagString: Asteroid
@@ -63,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4279979935521194213, guid: 429f3851ea680a64f94e0e437f08f584, type: 3}
+  - {fileID: 2100000, guid: eee996f5d4dd2ab49b8beadf17793a36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,3 +129,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   driftSpeed: 2
   rotationSpeed: 50
+--- !u!114 &8061874063312551161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554301099234007240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9ed8637810419468db029e93783a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destructableObject: {fileID: 1462470723462693013, guid: 1cb43525f85b1d94aac28bae2d8c5d9d,
+    type: 3}
+  explosionForce: 10
+  explosionRadius: 5
+  upwardModifier: 0.5
+  vfx: {fileID: 1007127540951276732, guid: 3ace37360f306cb4aac03640550fa9ef, type: 3}
+--- !u!135 &5198732816437428505
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554301099234007240}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.6949997
+  m_Center: {x: 0.013898253, y: -0.24506617, z: -0.16358578}
+--- !u!114 &3951055883349688435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554301099234007240}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.9961413, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
