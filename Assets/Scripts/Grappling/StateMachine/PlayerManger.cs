@@ -23,6 +23,10 @@ public class PlayerManager : MonoBehaviour
     public GrapplingState grapplingState;
     public FreezeState freezeState;
 
+
+    // GunShoot Event
+
+    public LaserGun LaserGun;
     private void Awake()
     {
         idleState = new IdleState(this);
@@ -32,6 +36,8 @@ public class PlayerManager : MonoBehaviour
 
         _controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+
+        LaserGun = GetComponentInChildren<LaserGun>();
     }
 
     private void Start()
@@ -46,6 +52,10 @@ public class PlayerManager : MonoBehaviour
         Cursor.visible = false;
     }
 
+    public void ShootLaser()
+    {
+        LaserGun.Shoot();
+    }
     private void Update()
     {
         _movement.ReadInput();

@@ -36,12 +36,16 @@ public class Grappling : MonoBehaviour
         if (Input.GetKeyDown(grappleKey))
             StartGrapple();
 
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+            player.animator.SetTrigger("LeftHandShoot");
+
         if (grapplingCdTimer > 0)
             grapplingCdTimer -= Time.deltaTime;
     }
 
     private void StartGrapple()
     {
+        player.animator.SetTrigger("RightHandShoot");
         if (grapplingCdTimer > 0) return;
 
         grappling = true;
