@@ -22,6 +22,8 @@ public class PlayerManager : MonoBehaviour
     public FloatState floatState;
     public GrapplingState grapplingState;
     public FreezeState freezeState;
+    public DeadState deadState;
+   
 
 
     // GunShoot Event
@@ -33,6 +35,7 @@ public class PlayerManager : MonoBehaviour
         floatState = new FloatState(this);
         grapplingState = new GrapplingState(this);
         freezeState = new FreezeState(this);
+        deadState = new DeadState(this);
 
         _controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
@@ -73,4 +76,8 @@ public class PlayerManager : MonoBehaviour
     {
         _cameraController.ApplyRotation();
     }
+
+   
+
+   
 }
