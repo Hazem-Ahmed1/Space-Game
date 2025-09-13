@@ -5,7 +5,7 @@ public class PlayerMovement
     private readonly CharacterController _controller;
     private readonly float _speed;
 
-    public Vector3 Direction { get; private set; }
+    public Vector3 Direction { get;  set; }
 
     public PlayerMovement(CharacterController controller, float speed)
     {
