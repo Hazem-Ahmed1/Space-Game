@@ -202,9 +202,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startScale: 10
   growthPerObject: 1
-  attractionRadius: 30
+  scaleUpDuration: 2
+  attractionRadius: 20
   attractionForce: 10
   affectedLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  destroyRadius: 1
+  followsPlayer: 1
+  followSpeed: 0.3
+  destroyRadius: 5
