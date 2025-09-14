@@ -18,6 +18,7 @@ public class Grappling : MonoBehaviour
 
     [Header("Input")]
     public KeyCode grappleKey = KeyCode.Mouse1;
+    public KeyCode LasereKey = KeyCode.Mouse0;
 
     private Vector3 grapplePoint;
     private bool grappling;
@@ -35,9 +36,11 @@ public class Grappling : MonoBehaviour
         if (Input.GetKeyDown(grappleKey))
             StartGrapple();
 
-        if (Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetKeyUp(LasereKey))
+        {
+            player.ShootLaser();
             player.animator.SetTrigger("LeftHandShoot");
-
+        }
         if (grapplingCdTimer > 0)
             grapplingCdTimer -= Time.deltaTime;
     }

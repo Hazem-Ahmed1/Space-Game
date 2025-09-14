@@ -113,7 +113,7 @@ public class PlayerManager : MonoBehaviour
     public DeadState deadState;
 
     // GunShoot Event
-    private LaserGun LaserGun;
+    public LaserGun LaserGun;
 
     private void Awake()
     {
