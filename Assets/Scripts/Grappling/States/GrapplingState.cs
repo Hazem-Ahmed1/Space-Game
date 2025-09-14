@@ -17,6 +17,7 @@ public class GrapplingState : MovementBaseState
     {
         isGrappling = false;
         velocity = Vector3.zero;
+        player.animator.SetBool("Fly", true);
 
         player._cameraController.ZoomIn(); // Zoom in when grappling starts
     }
@@ -50,6 +51,7 @@ public class GrapplingState : MovementBaseState
         isGrappling = false;
         velocity = Vector3.zero;
         player._cameraController.ZoomOut(); // Back to normal FOV
+        player.animator.SetBool("Fly", false);
     }
 
     // Called externally from Grappling.cs
