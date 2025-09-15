@@ -8,7 +8,6 @@ public class Scene : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
-
     }
     // Start is called before the first frame update
     public void ToGame()

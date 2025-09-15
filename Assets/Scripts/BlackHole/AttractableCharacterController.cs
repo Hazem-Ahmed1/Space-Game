@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CharacterController))]
 public class AttractableCharacterController : MonoBehaviour
@@ -14,7 +15,8 @@ public class AttractableCharacterController : MonoBehaviour
         // Check for destruction and return a game over signal or handle it here.
         if (distance <= 0.5f) // Using a hardcoded value, consider making it a property
         {
-            Debug.Log("Game Over");
+            Cursor.lockState = CursorLockMode.Confined;
+            SceneManager.LoadScene(0);
             return Vector3.zero; // Or a specific signal for game over state
         }
 

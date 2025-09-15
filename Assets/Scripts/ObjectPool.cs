@@ -236,21 +236,21 @@ public class ObjectPool : MonoBehaviour
     }
 
     // Debug information
-    void OnGUI()
-    {
-        if (Application.isPlaying && poolDictionary != null)
-        {
-            GUILayout.BeginArea(new Rect(10, 10, 300, 200));
-            GUILayout.Label("Object Pool Status:");
+    //void OnGUI()
+    //{
+    //    if (Application.isPlaying && poolDictionary != null)
+    //    {
+    //        GUILayout.BeginArea(new Rect(10, 10, 300, 200));
+    //        GUILayout.Label("Object Pool Status:");
 
-            foreach (var pool in pools)
-            {
-                int active = GetActiveCount(pool.tag);
-                int inactive = GetInactiveCount(pool.tag);
-                GUILayout.Label($"{pool.tag}: Active({active}) Inactive({inactive}) Total({pool.size})");
-            }
+    //        foreach (var pool in pools)
+    //        {
+    //            int active = GetActiveCount(pool.tag);
+    //            int inactive = GetInactiveCount(pool.tag);
+    //            GUILayout.Label($"{pool.tag}: Active({active}) Inactive({inactive}) Total({pool.size})");
+    //        }
 
-            GUILayout.EndArea();
-        }
-    }
+    //        GUILayout.EndArea();
+    //    }
+    //}
 }

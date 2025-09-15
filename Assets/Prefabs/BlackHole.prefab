@@ -159,7 +159,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 10
+  m_Radius: 10.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1125972825697040246
 Rigidbody:
@@ -204,10 +204,10 @@ MonoBehaviour:
   growthPerObject: 1
   scaleUpDuration: 2
   attractionRadius: 20
-  attractionForce: 10
+  attractionForce: 5
   affectedLayers:
     serializedVersion: 2
     m_Bits: 4294967295
   followsPlayer: 1
-  followSpeed: 0.3
+  followSpeed: 0.1
   destroyRadius: 5
