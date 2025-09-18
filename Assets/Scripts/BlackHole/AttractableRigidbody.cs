@@ -1,4 +1,3 @@
-// AttractableRigidbody.cs
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
