@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeda7bfbf984f2a4da5ab4b8967b115d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 1
+  m_Weight: 0
   m_Data:
     m_Root: {fileID: 1934017358454001514}
     m_Mid: {fileID: 2452983141199594241}
@@ -707,7 +707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c430f382484144e925c097c2d33cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 1
+  m_Weight: 0
   m_Data:
     m_ConstrainedObject: {fileID: 3677939360167222732}
     m_SourceObjects:
@@ -2043,7 +2043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeda7bfbf984f2a4da5ab4b8967b115d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 1
+  m_Weight: 0
   m_Data:
     m_Root: {fileID: 4438664521124780495}
     m_Mid: {fileID: 3482815990419114801}
@@ -2099,7 +2099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c430f382484144e925c097c2d33cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 1
+  m_Weight: 0
   m_Data:
     m_ConstrainedObject: {fileID: 295975096659371590}
     m_SourceObjects:
@@ -2667,10 +2667,12 @@ Animator:
   m_StabilizeFeet: 0
   m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
     are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'mixamorig1:RightHand'\n\tTransform 'mixamorig1:RightArm'\n\tTransform
-    'mixamorig1:LeftHand'\n\tTransform 'mixamorig1:RightShoulder'\n\tTransform 'mixamorig1:RightForeArm'\n\tTransform
-    'mixamorig1:LeftArm'\n\tTransform 'mixamorig1:LeftShoulder'\n\tTransform 'mixamorig1:LeftForeArm'\n\tTransform
-    'mixamorig1:RightHand'\n\tTransform 'mixamorig1:RightArm'\n\tand more ..."
+    by Humanoid clips.\n\tTransform 'mixamorig1:Hips'\n\tTransform 'mixamorig1:LeftHandThumb1'\n\tTransform
+    'mixamorig1:LeftHandPinky2'\n\tTransform 'mixamorig1:RightHand'\n\tTransform
+    'mixamorig1:LeftHandMiddle2'\n\tTransform 'mixamorig1:RightFoot'\n\tTransform
+    'mixamorig1:Spine1'\n\tTransform 'mixamorig1:RightLeg'\n\tTransform 'mixamorig1:RightHandMiddle2'\n\tTransform
+    'mixamorig1:Hips'\n\tand more ...\n\tFrom animation clip 'LeftPointing'\n\tFrom
+    animation clip 'RightPointing'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -3123,7 +3125,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   aimSmoothSpeed: 10
-  aimRig: {fileID: 0}
+  shootCooldown: 0.5
+  handLeftAim: {fileID: 721784269}
+  handRightAim: {fileID: 1724676276}
+  leftHandIK: {fileID: 1693152174}
+  rightHandIK: {fileID: 4438706}
   LaserGun: {fileID: 1837047593}
 --- !u!4 &1934017358454001514
 Transform:
@@ -5290,6 +5296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlackHole
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638933273495059380, guid: 393cbaf139166b640853955be064d8fb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1638933273495059380, guid: 393cbaf139166b640853955be064d8fb,
         type: 3}
