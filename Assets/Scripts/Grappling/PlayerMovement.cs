@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerMovement
 {
     private readonly CharacterController _controller;
-    private readonly float _speed;
+    public float BaseSpeed { get; set; }
 
     public Vector3 Direction { get; set; }
     public Vector3 ExternalForce { get; set; } // New property for external forces
@@ -11,7 +11,7 @@ public class PlayerMovement
     public PlayerMovement(CharacterController controller, float speed)
     {
         _controller = controller;
-        _speed = speed;
+       BaseSpeed = speed;
     }
 
     public void ReadInput()
@@ -24,7 +24,7 @@ public class PlayerMovement
     public void Move()
     {
         // Add the external force to the player's normal direction
-        Vector3 totalDirection = Direction.normalized * _speed + ExternalForce;
+        Vector3 totalDirection = Direction.normalized * BaseSpeed + ExternalForce;
         _controller.Move(totalDirection * Time.deltaTime);
     }
 }
