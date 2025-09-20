@@ -553,6 +553,7 @@ MonoBehaviour:
   overshootYAxis: 2
   grapplingCd: 1
   grappleKey: 324
+  LasereKey: 323
 --- !u!136 &644684875
 CapsuleCollider:
   m_ObjectHideFlags: 0

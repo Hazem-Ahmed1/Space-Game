@@ -1,0 +1,54 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 08.12.2011 14:30:11
+
+newmtl Boots_laces
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0784 0.0784 0.0784
+	Kd 0.0784 0.0784 0.0784
+	Ks 0.0810 0.0810 0.0810
+	Ke 0.0000 0.0000 0.0000
+
+newmtl Boots_metall
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0902 0.0902 0.0902
+	Kd 0.0902 0.0902 0.0902
+	Ks 0.5850 0.5850 0.5850
+	Ke 0.0000 0.0000 0.0000
+
+newmtl Boots_sole
+	Ns 13.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 1.0000 1.0000 1.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.3960 0.3960 0.3960
+	Ke 0.0000 0.0000 0.0000
+	map_Ka boots_sole.jpg
+	map_Kd boots_sole.jpg
+
+newmtl boots_body
+	Ns 12.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 1.0000 1.0000 1.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.1800 0.1800 0.1800
+	Ke 0.0000 0.0000 0.0000
+	map_Ka boots_body.jpg
+	map_Kd boots_body.jpg
