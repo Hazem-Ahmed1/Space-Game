@@ -13,9 +13,9 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 10
+  serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 1, g: 0, b: 0, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -42,8 +42,8 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 13
-  m_BakeOnSceneLoad: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -66,6 +66,9 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -127,47 +130,78 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7973915629106477781, guid: 092623852845eea40ba3203c149c65f2, type: 3}
+    - target: {fileID: 4954185412218885677, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954185412218885677, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954185412218885677, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c94f95af015b4c342bd722e1ad6a7991, type: 2}
+    - target: {fileID: 6436968203927271575, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7973915629106477781, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
       propertyPath: m_Name
       value: BlackHole
       objectReference: {fileID: 0}
-    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2, type: 3}
+    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -59.950512
       objectReference: {fileID: 0}
-    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2, type: 3}
+    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 76.38
       objectReference: {fileID: 0}
-    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2, type: 3}
+    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 63.19
       objectReference: {fileID: 0}
-    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2, type: 3}
+    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9998582
       objectReference: {fileID: 0}
-    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2, type: 3}
+    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.016841723
       objectReference: {fileID: 0}
-    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2, type: 3}
+    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2, type: 3}
+    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2, type: 3}
+    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -1.93
       objectReference: {fileID: 0}
-    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2, type: 3}
+    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2, type: 3}
+    - target: {fileID: 8692645709063350453, guid: 092623852845eea40ba3203c149c65f2,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -257,7 +291,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -411,8 +445,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201456085}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 10
@@ -462,12 +497,8 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
-  m_ForceVisible: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-  m_LightUnit: 1
-  m_LuxAtDistance: 1
-  m_EnableSpotReflector: 1
 --- !u!4 &1201456088
 Transform:
   m_ObjectHideFlags: 0
@@ -541,9 +572,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

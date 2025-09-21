@@ -175,6 +175,9 @@ GameObject:
   - component: {fileID: 5362787040893709894}
   - component: {fileID: 1355445112440533383}
   - component: {fileID: 6798203781204700225}
+  - component: {fileID: 4626322070276152385}
+  - component: {fileID: 522983411300853415}
+  - component: {fileID: 1674993405169546934}
   m_Layer: 3
   m_Name: Expo 1
   m_TagString: Untagged
@@ -304,6 +307,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   driftSpeed: 2
   rotationSpeed: 50
+--- !u!114 &4626322070276152385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5201833317906006186}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.9961413, b: 0, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &522983411300853415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5201833317906006186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9ed8637810419468db029e93783a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destructableObject: {fileID: 1462470723462693013, guid: 1cb43525f85b1d94aac28bae2d8c5d9d,
+    type: 3}
+  explosionForce: 10
+  explosionRadius: 5
+  upwardModifier: 0.5
+  vfx: {fileID: 1007127540951276732, guid: 3ace37360f306cb4aac03640550fa9ef, type: 3}
+--- !u!135 &1674993405169546934
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5201833317906006186}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.3
+  m_Center: {x: 0.33, y: -0.1930688, z: -0.12128627}
 --- !u!1 &5958383255982630583
 GameObject:
   m_ObjectHideFlags: 0
